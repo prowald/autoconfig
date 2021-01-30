@@ -1,4 +1,4 @@
 #!/bin/bash
 
 hostname=$(uname -n)
-echo "Current Hostname: $(hostname)
+echo "Current Hostname: $(hostname)"
