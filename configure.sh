@@ -11,7 +11,7 @@ while true; do
         [Yy]* ) read -p "Enter new Hostname [raspberrypi]: " name
 				name=${name:-raspberrypi}
 				echo -e "Checking Newhost"
-				if [[ $newhost =~ ^[A-Za-z0-9_-]*$ ]]
+				if [[ $newhost =~ ^[A-Za-z0-9_-]*$ ]];
 				then
 					break
 				else
