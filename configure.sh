@@ -1,6 +1,6 @@
 #!/bin/bash
-RESET='tput sgr0'
-COLOR='\e[94m'
+RESET=`tput sgr0`
+COLOR=`\e[94m`
 
 hostname=$(uname -n)
 newhost=
