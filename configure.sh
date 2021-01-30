@@ -2,6 +2,7 @@
 RESET=`tput sgr0`
 COLOR='\e[94m'
 
+
 hostname=$(uname -n)
 newhost=
 echo -e "${RESET}Current Hostname: ${COLOR}${hostname}${RESET}"
