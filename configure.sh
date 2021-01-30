@@ -8,8 +8,8 @@ echo -e "${COLOR}Current Hostname: \e[94m$(hostname)${RESET}"
 while true; do
     read -p "Change Hostname?(yN)" yn
     case $yn in
-        [Yy]* ) read -p "Enter new Hostname [raspberrypi]: " name
-				name=${name:-raspberrypi}
+        [Yy]* ) read -p "Enter new Hostname [raspberrypi]: " newhost
+				newhost=${newhost:-raspberrypi}
 				echo -e "Checking Newhost"
 				if [[ $newhost =~ ^[A-Za-z0-9_-]*$ ]];
 				then
