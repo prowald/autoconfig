@@ -13,10 +13,8 @@ while true; do
 				echo -e "Checking Newhost: ${newhost,}"
 				if [[ $newhost =~ ^[A-Za-z0-9_-]*$ ]];
 				then
-					echo -e "Change host 1"
 					echo -e ${newhost,} > /etc/hostname
-					echo -e "Change host 2"
-					sed "s/127.0.1.1.*/127.0.1.1	${newhost,}/g" /etc/hosts
+					sed -i "s/127.0.1.1.*/127.0.1.1	${newhost,}/g" /etc/hosts
 					echo -e "Hostname changed"
 					break 3
 				else
