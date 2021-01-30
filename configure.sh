@@ -15,8 +15,8 @@ while true; do
 				else
 					echo "Only numbers and letters are allowed."
 					exit;
-				fi
-        * ) break;
+				fi;;
+        * ) break;;
     esac
 done
 echo ${newhost,} > /etc/hostname
