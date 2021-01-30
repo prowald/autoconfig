@@ -1,4 +1,5 @@
 import tkinter
+import os
 
 if os.environ.get('DISPLAY','') == '':
     print('no display found. Using :0.0')
