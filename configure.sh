@@ -8,7 +8,9 @@ echo -e "${COLOR}Current Hostname: \e[94m$(hostname)${RESET}"
 while true; do
     read -p "Change Hostname?(yN)" yn
     case $yn in
-        [Yy]* ) read -p "New Hostname: " newhost
+        [Yy]* ) read -p "Enter new Hostname [raspberrypi]: " name
+				name=${name:-raspberrypi}
+				echo -e "Checking Newhost"
 				if [[ $newhost =~ ^[A-Za-z0-9_-]*$ ]]
 				then
 					break
@@ -19,5 +21,5 @@ while true; do
         * ) break;;
     esac
 done
-echo ${newhost,} > /etc/hostname
+echo -e ${newhost,} > /etc/hostname
 sed "s/127.0.1.1.*/127.0.1.1	${newhost,}/g"
