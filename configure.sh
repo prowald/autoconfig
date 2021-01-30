@@ -15,10 +15,10 @@ while true; do
 				then
 					echo -e ${newhost,} > /etc/hostname
 					sed "s/127.0.1.1.*/127.0.1.1	${newhost,}/g"
-					exit 2
+					break 2
 				else
 					echo "Only numbers and letters are allowed."
-					exit 
+					break
 				fi;;
         * ) break;;
     esac
