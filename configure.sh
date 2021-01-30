@@ -6,10 +6,11 @@ hostname=$(uname -n)
 newhost=
 echo -e "${COLOR}Current Hostname: \e[94m$(hostname)${RESET}"
 while true; do
-    read -p "Change Hostname?" yn
+    read -p "Change Hostname?(yN)" y
     case $yn in
         [Yy]* ) read -p "New Hostname: " newhost; break;;
         * ) break;;
     esac
 done
-echo -e "${COLOR}NEW Hostname: \e[94m${newhost}${RESET}"
+echo ${RESET} > /etc/hostname
+sed "s/127.0.1.1.*/127.0.1.1	${newhost}/g"
