@@ -24,6 +24,6 @@ while true; do
         * ) break;;
     esac
 done
-echo -e"${COLOR}$Setting up Misson Control${RESET}$"
-apt-get install --no-install-recommends xserver-xorg xinit 
-apt-get install lightdm
+echo -e"${COLOR}Setting up Misson Control${RESET}$"
+apt-get install -y --no-install-recommends xserver-xorg xinit 
+apt-get install -y lightdm
