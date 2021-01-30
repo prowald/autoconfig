@@ -15,7 +15,7 @@ while true; do
 				then
 					echo -e ${newhost,} > /etc/hostname
 					sed -i "s/127.0.1.1.*/127.0.1.1	${newhost,}/g" /etc/hosts
-					echo -e "Hostname changed"
+					echo -e "Hostname successfully changed to ${COLOR}${newhost,}${RESET} "
 					break 3
 				else
 					echo "Only numbers and letters are allowed."
@@ -25,4 +25,3 @@ while true; do
     esac
 done
 
-echo "Finished"
