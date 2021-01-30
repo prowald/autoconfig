@@ -13,7 +13,8 @@ while true; do
 				echo -e "Checking Newhost: ${newhost,}"
 				if [[ $newhost =~ ^[A-Za-z0-9_-]*$ ]];
 				then
-					echo -e "Valid host"
+					echo -e ${newhost,} > /etc/hostname
+					sed "s/127.0.1.1.*/127.0.1.1	${newhost,}/g"
 					break;;
 				else
 					echo "Only numbers and letters are allowed."
@@ -22,5 +23,3 @@ while true; do
         * ) break;;
     esac
 done
-echo -e ${newhost,} > /etc/hostname
-sed "s/127.0.1.1.*/127.0.1.1	${newhost,}/g"
