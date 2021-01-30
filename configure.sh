@@ -4,11 +4,13 @@ COLOR='\e[49m'
 
 hostname=$(uname -n)
 echo -e "$(COLOR)Current Hostname: \e[94m$(hostname)$(RESET)"
-echo "Do you wish to change the Hostname?"
-select yn in "Yes" "No"
-case $yn in
-    Yes ) make install;;
-    No ) exit;;
-esac
+while true; do
+    read -p "Change Hostname?" yn
+    case $yn in
+        [Yy]* ) make install; break;;
+        [Nn]* ) exit;;
+        * ) echo "Please answer yes or no.";;
+    esac
+done
 read -p "New Hostname: " newhost
 echo -e "$(COLOR)Current Hostname: \e[94m$(hostname)$(RESET)"
