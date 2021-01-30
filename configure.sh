@@ -3,6 +3,7 @@ RESET='\033[0m'
 COLOR='\e[49m'
 
 hostname=$(uname -n)
+newhost=
 echo -e "$(COLOR)Current Hostname: \e[94m$(hostname)$(RESET)"
 while true; do
     read -p "Change Hostname?" yn
@@ -11,5 +12,4 @@ while true; do
         * ) break;;
     esac
 done
-read -p "New Hostname: " newhost
 echo -e "$(COLOR)NEW Hostname: \e[94m$(newhost)$(RESET)"
