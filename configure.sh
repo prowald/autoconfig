@@ -16,7 +16,7 @@ while true; do
 					echo -e ${newhost,} > /etc/hostname
 					sed "s/127.0.1.1.*/127.0.1.1	${newhost,}/g"
 					echo -e "Hostname changed"
-					break 3;;
+					break 3
 				else
 					echo "Only numbers and letters are allowed."
 					break
