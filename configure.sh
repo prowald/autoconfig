@@ -24,5 +24,5 @@ while true; do
         * ) break;;
     esac
 done
-echo -e"${COLOR}Setting up Misson Control${RESET}$"
+echo -e"${COLOR}Setting up Misson Control${RESET}"
 apt-get install -y --no-install-recommends xserver-xorg xinit 
