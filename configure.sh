@@ -13,6 +13,7 @@ while true; do
 				echo -e "Checking Newhost: ${newhost,}"
 				if [[ $newhost =~ ^[A-Za-z0-9_-]*$ ]];
 				then
+					echo -e "Valid host"
 					break
 				else
 					echo "Only numbers and letters are allowed."
