@@ -12,4 +12,4 @@ while true; do
         * ) break;;
     esac
 done
-echo -e "${COLOR}NEW Hostname: \e[94m$(newhost)${RESET}"
+echo -e "${COLOR}NEW Hostname: \e[94m${newhost}${RESET}"
