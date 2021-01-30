@@ -14,10 +14,10 @@ while true; do
 				if [[ $newhost =~ ^[A-Za-z0-9_-]*$ ]];
 				then
 					echo -e "Valid host"
-					break
+					break;;
 				else
 					echo "Only numbers and letters are allowed."
-					exit
+					exit;;
 				fi;;
         * ) break;;
     esac
