@@ -11,10 +11,10 @@ while true; do
         [Yy]* ) read -p "New Hostname: " newhost;
 				if [[ $newhost =~ ^[A-Za-z0-9_-]*$ ]]
 				then
-					break;;
+					break
 				else
 					echo "Only numbers and letters are allowed."
-					exit;;
+					exit
 				fi;;
         * ) break;;
     esac
