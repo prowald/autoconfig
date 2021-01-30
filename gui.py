@@ -1,5 +1,9 @@
 import tkinter
 
+if os.environ.get('DISPLAY','') == '':
+    print('no display found. Using :0.0')
+    os.environ.__setitem__('DISPLAY', ':0.0')
+    
 class mission:
     def __init__(self):
         self.window = tkinter.Tk()
@@ -20,3 +24,4 @@ class mission:
 
 if __name__ == '__main__':
     app = mission()
+    
