@@ -1,6 +1,7 @@
 import tkinter
-    
-class mission:
+
+
+class Mission:
     def __init__(self):
         self.window = tkinter.Tk()
         self.window.attributes('-fullscreen', True)
@@ -18,6 +19,6 @@ class mission:
         self.fullScreenState = False
         self.window.attributes("-fullscreen", self.fullScreenState)
 
+
 if __name__ == '__main__':
-    app = mission()
-    
+    app = Mission()
