@@ -2,8 +2,8 @@
 RESET='\033[0m'
 COLOR='\e[94m'
 
+#
 hostname=$(uname -n)
-newhost=
 echo -e "${RESET}Current Hostname: ${COLOR}${hostname}${RESET}"
 while true; do
     read -p "Change Hostname?(yN)" yn
@@ -26,3 +26,9 @@ while true; do
 done
 echo -e "${COLOR}Setting up Misson Control${RESET}"
 apt-get install -y --no-install-recommends xserver-xorg xinit python3-tk
+
+# Enable autologin
+echo "[Service]\nExecStart=\nExecStart=-/sbin/agetty --autologin root --noclear %I 38400 linux" > /etc/systemd/system/getty@tty1.service.d/override.conf
+systemctl enable getty@tty1.service
+#xserver-xorg-input-evdev
+#sudo cp -rf /usr/share/X11/xorg.conf.d/10-evdev.conf /usr/share/X11/xorg.conf.d/45-evdev.conf
